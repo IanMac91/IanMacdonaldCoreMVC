@@ -6,4 +6,23 @@
 
 <h2>View Artists</h2>
 
+<table cellpadding="5">
+    <tr>
+        <th>Id</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th></th>
+    </tr>
+    @foreach (var Artist in Model)
+    {
+    <tr>
+        <td>@Artist.ArtistId</td>
+        <td>@Artist.ArtistName</td>
+        <td>@Artist.Genre</td>
+        <td><a class="btn btn-primary" asp-action="Details" asp-controller="Home" asp-route-id="@Artist.ArtistId">View</a></td>
+    </tr>
+    }
+</table>
+
+
 <a class="btn btn-primary" asp-controller="Home" asp-action="Add" >Add New Artist</a>

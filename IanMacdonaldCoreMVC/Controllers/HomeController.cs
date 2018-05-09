@@ -21,7 +21,7 @@ namespace IanMacdonaldCoreMVC.Controllers
         public IActionResult Index()
         {
             var model = _artistData.GetArtists();
-            return View();
+            return View(model);
         }
 
         [HttpGet]

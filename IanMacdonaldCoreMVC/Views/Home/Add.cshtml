@@ -1,0 +1,24 @@
+﻿@using IanMacdonaldCoreMVC.Models;
+@model IanMacdonaldCoreMVC.Models.Artist
+
+@{
+    ViewData["Title"] = "Add New Artist";
+}
+<h1>Add New Artist</h1>
+<br />
+
+<form method="post">
+    <div>
+    <label asp-for="ArtistName"></label>
+    <input asp-for="ArtistName" />
+    <span asp-validation-for="ArtistName"></span>
+    </div>
+    <div>
+        <label asp-for="Genre"></label>
+        <select asp-for="Genre" asp-items="@Html.GetEnumSelectList<Genre>()"></select>
+        <span asp-validation-for="Genre"></span>
+    </div>
+    <div>
+        <input type="submit" name="save" value="Save" class="btn btn-primary" />
+    </div>
+</form>

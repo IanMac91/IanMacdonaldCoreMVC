@@ -1,0 +1,11 @@
+﻿@model IanMacdonaldCoreMVC.Models.Artist
+
+@{
+    ViewData["Title"] = "View Artist";
+}
+
+<div>@Model.ArtistName</div>
+
+<div>@Model.Genre</div>
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Home</a>
